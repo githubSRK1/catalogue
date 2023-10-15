@@ -18,6 +18,7 @@ pipeline {
         //         sh 'sonar-scanner'
         //     }
         // }
+        
         stage('Build') {
             steps {
                 sh 'ls -ltr'
@@ -31,7 +32,7 @@ pipeline {
                     protocol: 'http',
                     nexusUrl: '52.71.253.240:8081/',
                     groupId: 'com.roboshop',
-                    version: '1.0.1',
+                    version: '1.1.0',
                     repository: 'catalogue',
                     credentialsId: 'nexus-auth',
                     artifacts: [
